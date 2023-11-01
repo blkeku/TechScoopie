@@ -1,40 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;800;900&display=swap">
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0b0d;
+    color: #fff;
+    padding: 2vw;
+    font-family: 'Orbitron', sans-serif;
+}
 
-    <title>TechScoopie</title>
-</head>
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">TECH STORIES</a></li>
-                <li><a href="#">COOL TECH</a></li>
-                <li><a href="#">TECH REVIEWS</a></li>
-            </ul>
-        </nav>
-        <img src="images/logo.png" alt="Your Logo" class="logo"> 
-    </header>
+nav li:not(:last-child) {
+    margin-right: 1vw;
+}
 
-    <main>
-        <section class="artwork-section">
-            <div class="thumbnail-container">
-                <img src="images/thumbnail_1.png" alt="Classical artwork depicting love">
-                <a href="#" class="floating-text">Click Me<span class="shadow-text">Click Here</span></a>
-            </div>
-        </section>
-    </main>
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
 
-    <footer>
-        <p>TechScoopie</p>
-    </footer>
-</body>
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
 
-</html>
+.logo {
+    height: 12vw;
+    width: auto;
+}
+
+.artwork-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.thumbnail-container {
+    position: relative;
+    display: inline-block;
+    width: 80vw;
+    height: 40vh;
+    overflow: hidden;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-text {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    padding: 2vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1vw;
+    transition: background-color 0.3s, transform 0.3s;
+    overflow: hidden;
+    font-size: 3vw;
+}
+
+.floating-text:hover .shadow-text {
+    transform: translateY(-50%);
+}
+
+.shadow-text {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    padding: 2vw;
+    border-radius: 1vw;
+    transition: transform 0.3s;
+    color: transparent;
+    text-shadow: 0 2px 0 #c0884f;
+    pointer-events: none;
+    font-size: 3vw;
+}
+
+footer {
+    background-color: #0b0b0d;
+    color: #fff;
+    text-align: center;
+    padding: 2vw 0;
+    font-size: 3vw;
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1vw;
+    }
+
+    .logo {
+        height: 20vw;
+    }
+}
