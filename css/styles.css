@@ -1,100 +1,40 @@
-body {
-    font-family: 'Rajdhani', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0b0b0d;
-    color: #fff;
-    padding: 10px 20px;
-    font-family: 'Orbitron', sans-serif;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;800;900&display=swap">
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    <title>TechScoopie</title>
+</head>
 
-nav li:not(:last-child) {
-    margin-bottom: 10px;
-}
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">TECH STORIES</a></li>
+                <li><a href="#">COOL TECH</a></li>
+                <li><a href="#">TECH REVIEWS</a></li>
+            </ul>
+        </nav>
+        <img src="images/logo.png" alt="Your Logo" class="logo"> 
+    </header>
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    display: block;
-}
+    <main>
+        <section class="artwork-section">
+            <div class="thumbnail-container">
+                <img src="images/thumbnail_1.png" alt="Classical artwork depicting love">
+                <a href="#" class="floating-text">Click Me<span class="shadow-text">Click Me</span></a>
+            </div>
+        </section>
+    </main>
 
-nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
+    <footer>
+        <p>TechScoopie</p>
+    </footer>
+</body>
 
-.logo {
-    height: 60px;
-    width: auto;
-}
-
-.artwork-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 320px;
-    background-color: rgba(0, 0, 0, 1);
-}
-
-.thumbnail-container {
-    position: relative;
-    display: inline-block;
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-}
-
-.thumbnail-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.floating-text {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    padding: 8px 12px;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-    overflow: hidden; /* Add this */
-}
-
-.floating-text:hover .shadow-text {
-    transform: translateY(-50%); 
-}
-
-.shadow-text {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: transform 0.3s;
-    color: transparent;
-    text-shadow: 0 2px 0 #c0884f;
-    pointer-events: none;
-}
-
-footer {
-    background-color: #0b0b0d;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
+</html>
